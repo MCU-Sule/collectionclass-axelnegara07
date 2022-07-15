@@ -1,0 +1,34 @@
+2072029 - Axel Shira Sapata Negara
+
+- how to search for data with nrp
+Masukan nilai. Kemudian menggunakan fungsi for each untuk mencari data NRP, sampai data tersebut sama dengan nilai yang kita masukan.
+
+- how to delete
+Mencari data NRP sampai nilai NRP yang kita cari sama dengan NRP pada data yang sudah tersedia. Jika sudah ketemu, maka data akan dihapus menggunakan method remove
+
+- how to prevent error when no data deleted
+jika menggunakan for each data akan terus mencari (ngeloop terus-menerus) (error). Maka, gunakan break agar langsung menghentikan looping for each.
+
+- how to show error when no data deleted
+Menggunakan if else apakah data tersebut sudah ada atau belum, jika ada maka data akan terhapus, jika data tidak ada maka inputan yang kita masukkan akan berubah menjadi "data tidak ada".
+
+- how to add confirm box to make sure deletion
+Import dan deklarasi JOptionPane.
+Kemudian Membuat variabel baru yang di isi dengan JOptionPane.showConfirmDialog({bebas},{bebas},{bebas},JOptionPane.YES_NO_OPTION);
+Lalu if variabel baru tadi dengan method remove(0 = YES, 1 = NO)
+
+- how to know which data selected from table select
+Menggunakan fungsi {id table}.getSelectionModel().getSelectedItem().{item dari table}
+
+- how to show selected data from table on the txtNrpDelete
+Menggunakan fungsi txtNama.setText(table1.getSelectionModel().getSelectedItem().{item dari table});
+
+- how to delete data selected from table select
+Membuat variabel baru yang di isi dengan FXCollections.observableArrayList();
+Kemudian menggunakan {variabel baru tadi}.remove({id table}.getSelectionModel().getSelectedItem());
+
+- if student has multiple score, and you would like to add delete update score on student what file need to be added
+Membuat file model baru yaitu model score dimana model score ini merupakan turunan dari model Student yang sudah ada sebelumnya.
+
+- if student has multiple score, and you would like to add delete update score on student what file need to be updated
+Menambahkan fungsi add delete update pada controller.
